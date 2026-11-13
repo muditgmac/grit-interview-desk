@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101a31" />
+  <title>GRIT Interview Desk | Prototype</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="identity">
+        <div class="brand-symbol"><span>G</span></div>
+        <div><strong>GRIT<span class="brand-dot">.</span></strong><small>Interview Desk</small></div>
+      </div>
+      <div class="sidebar-label">DEMO WORKSPACE</div>
+      <nav id="nav" aria-label="Navigation">
+        <button class="nav-link active" data-page="home"><span class="nav-icon">⌂</span> Student dashboard</button>
+        <button class="nav-link" data-page="booking"><span class="nav-icon">▦</span> Book an interview</button>
+        <button class="nav-link" data-page="interviewer"><span class="nav-icon">▤</span> Interviewer schedule</button>
+        <button class="nav-link" data-page="team"><span class="nav-icon">◫</span> Interview team</button>
+        <button class="nav-link" data-page="preview"><span class="nav-icon">◧</span> Before & after</button>
+        <button class="nav-link" data-page="rules"><span class="nav-icon">ⓘ</span> Design decisions</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="demo-box"><div class="demo-signal"></div><div><b>Interactive prototype</b><p>Uses sample students and a local database. Not connected to NIAT accounts.</p></div></div>
+      <button id="resetButton" class="reset-button">↻ &nbsp; Reset demo data</button>
+      <div class="footer-note">Built for the AI Product Engineer assignment</div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-title"><button id="mobileMenu" class="mobile-menu" aria-label="Toggle menu">☰</button><span class="crumb">GRIT /</span><strong id="breadcrumb">Student dashboard</strong></div>
+        <div class="topbar-actions"><span class="live-pill"><span></span> Demo environment</span><label class="viewer-label" for="studentPicker">Viewing student</label><select id="studentPicker" aria-label="View as student"></select><div class="avatar">MG</div></div>
+      </header>
+      <main id="content"><div class="loading">Loading the interview desk…</div></main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
